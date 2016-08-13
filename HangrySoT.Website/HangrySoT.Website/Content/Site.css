@@ -28,14 +28,14 @@ textarea {
 
 h3 {
     font-family: Calibre-Semibold;
-	font-size:24 px;
+	font-size:24px;
 	letter-spacing: 0px;
 	color:#FFFFFF;
     text-align:left;
 }
 #loadingtext {
 	font-family: Calibre-Semibold;
-	font-size:24 px;
+	font-size:24px;
 	font-weight:500;
 	line-height: 31px;
 	letter-spacing: 1.2px;
@@ -57,7 +57,7 @@ h3 {
 #camerabtn {
 	background-color:#F44336 !important;
 	border-color:#FCE4EC !important;
-	border-radius: 4px;
+	border-radius:4px;
 	border-style:3px, solid !important;
 	font-family:Calibre-Regular !important;
 	text-align: center;
