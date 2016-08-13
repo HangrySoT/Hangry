@@ -32,6 +32,9 @@ h3 {
 	letter-spacing: 0px;
 	color:#FFFFFF;
     text-align:left;
+    position: fixed;
+    top:0px;
+    left:20px;
 }
 #loadingtext {
 	font-family: Calibre-Semibold;
@@ -70,7 +73,7 @@ h3 {
 #directionsbtn {
 	background-color:#F44336;
 	border-color:#FFFFFF;
-	border-style: 2px, solid ;
+	border-style:2px, solid ;
 	font-family:Calibre-Regular;
 	text-align: center;
 	font-size: 24px; 
