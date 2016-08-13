@@ -1,4 +1,7 @@
-﻿body {
+﻿@font-face {font-family: Calibre; src:url('/fonts/Calibre-Regular.otf');}
+@font-face {font-family: Calibre; font-weight: 500; src:url('/fonts/Calibre-Semibold.otf');}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-color:#F44336;
@@ -27,7 +30,8 @@ textarea {
 /*Text*/
 
 h3 {
-    font-family: Calibre-Semibold;
+    font-family: Calibre;
+    font-weight: 500;
 	font-size:24px;
 	letter-spacing: 0px;
 	color:#FFFFFF;
@@ -37,18 +41,18 @@ h3 {
     left:20px;
 }
 #loadingtext {
-	font-family: Calibre-Semibold;
+	font-family: Calibre;
+    font-weight: 500;
 	font-size:24px;
-	font-weight:500;
 	line-height: 31px;
 	letter-spacing: 1.2px;
 	color:#FFFFFF;
 }
 
 #descriptiontext {
-	font-family: Calibre-Regular;
+    padding-top:15%;
+	font-family: Calibre;
 	font-size:21px;
-	font-weight:500;
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
@@ -79,3 +83,10 @@ h3 {
 	font-size: 24px; 
 
 }
+
+/*Footer*/
+footer {
+    position:absolute;
+    bottom:0px;
+}
+
