@@ -13,3 +13,4 @@ navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
   }
 
 //Go to Loading Screen
+   

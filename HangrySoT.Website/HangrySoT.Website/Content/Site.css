@@ -109,7 +109,6 @@ h3 {
 
 .filelabel {
     display:inline-block;
-    vertical-align:middle;
     -moz-border-radius: 10px;
     border-radius: 10px;
 	background-color:#F44336 !important;
@@ -121,7 +120,9 @@ h3 {
 	font-size: 24px !important;
 	font-weight: normal;
     color:#FFFFFF;
-    content:'Feed me';
+    line-height:2.5;
+    padding:0px 20px 0 20px;
+   
 }
 
 #location{
@@ -141,6 +142,8 @@ h3 {
 	text-align: center;
 	font-size: 24px; 
     color:#FFFFFF;
+    line-height:2.5;
+    padding:0px 20px 0 20px;
 
 }
 
@@ -161,6 +164,8 @@ h3 {
     color:#FFFFFF;
 	text-align: center;
 	font-size: 24px; 
+    line-height:2.5;
+    padding:0px 20px 0 20px;
 
 }
 /*Footer*/
