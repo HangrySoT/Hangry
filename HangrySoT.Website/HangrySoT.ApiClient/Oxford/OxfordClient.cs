@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Configuration;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
@@ -12,7 +13,7 @@ namespace HangrySoT.ApiClient.Oxford
 
     public class OxfordClient : IOxfordClient
     {
-        private const string subscriptionKey = "";
+        private readonly string subscriptionKey = ConfigurationManager.AppSettings["OxfordApiKey"];
         private readonly EmotionServiceClient _emotionServiceClient;
 
         public OxfordClient()
