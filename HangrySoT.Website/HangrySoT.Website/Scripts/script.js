@@ -10,4 +10,6 @@ navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
   function noLocation()
  {
     alert('Could not find location');
- }
+  }
+
+//Go to Loading Screen

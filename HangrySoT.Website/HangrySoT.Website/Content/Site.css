@@ -93,20 +93,25 @@ h3 {
     text-align:center;
 }
 
-#camerabtn{
+.inputfile {
+	display:none;
+}
+
+.filelabel {
+    display:inline-block;
+    vertical-align:middle;
     -moz-border-radius: 10px;
     border-radius: 10px;
 	background-color:#F44336 !important;
 	border-color:#FCE4EC !important;
-	border-radius:4px;
 	border-style:solid !important;
     border-width:2px;
-	font-family:Calibre-Regular !important;
+	font-family:Calibre;
 	text-align: center;
 	font-size: 24px !important;
 	font-weight: normal;
+    color:#FFFFFF;
     content:'Feed me';
-
 }
 
 #location{
@@ -122,7 +127,7 @@ h3 {
 	border-color:#FFFFFF;
 	border-style:solid ;
     border-width:2px;
-	font-family:Calibre-Regular;
+	font-family:Calibre;
 	text-align: center;
 	font-size: 24px; 
     color:#FFFFFF;
@@ -142,7 +147,7 @@ h3 {
 	border-color:#FFFFFF;
 	border-style:solid ;
     border-width:2px;
-	font-family:Calibre-Regular;
+	font-family:Calibre;
     color:#FFFFFF;
 	text-align: center;
 	font-size: 24px; 
@@ -154,20 +159,3 @@ footer {
     bottom:0px;
 }
 
-/*Camera Button*/
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-
-.inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
-    display: inline-block;
-}
