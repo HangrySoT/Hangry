@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:#F44336;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +23,48 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Text*/
+#loadingtext {
+	font-family: Calibre-Semibold;
+	font-size:24 px;
+	font-weight:500;
+	line-height: 31px;
+	letter-spacing: 1.2px;
+	color:#FFFFFF;
+}
+
+#descriptiontext {
+	font-family: Calibre-Regular;
+	font-size:21 px;
+	font-weight:500;
+	line-height: 32px;
+	letter-spacing: 1.05px;
+	color:#FFFFFF;
+}
+
+
+/*Button*/
+
+#camerabtn {
+	background-color:#F44336 !important;
+	border-color:#FCE4EC !important;
+	border-radius: 4px;
+	border-style:3px, solid !important;
+	font-family:Calibre-Regular;
+	text-align: center;
+	font-size: 24px;
+	font-weight: normal;
+
+}
+	
+#directionsbtn {
+	background-color:#F44336;
+	border-color:#FFFFFF;
+	border-style: 2px, solid ;
+	font-family:Calibre-Regular;
+	text-align: center;
+	font-size: 24px; 
+
+}
+
