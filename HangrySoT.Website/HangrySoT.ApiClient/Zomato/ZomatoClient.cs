@@ -1,4 +1,5 @@
 ﻿
+using System.Configuration;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -8,7 +9,7 @@ namespace HangrySoT.ApiClient.Zomato
 {
     public class ZomatoClient
     {
-        const string userKey = "";
+        readonly string userKey = ConfigurationManager.AppSettings["ZomatoApiKey"];
 
         public async Task<ZomatoResponse> SearchByLatLon(decimal latitude = 36.8441547m, decimal longitude = 174.7576598m)
         {
