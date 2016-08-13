@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
+using Microsoft.ProjectOxford.Common;
 
 namespace HangrySoT.ApiClient.Oxford
 {

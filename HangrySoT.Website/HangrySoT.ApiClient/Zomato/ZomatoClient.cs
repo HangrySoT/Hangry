@@ -10,7 +10,7 @@ namespace HangrySoT.ApiClient.Zomato
     {
         const string userKey = "";
 
-        public async Task<ZomatoResponse> SearchByLatLon(decimal latitude = 36.8441547m, decimal longitude = 174.7576598m)
+        public async Task<ZomatoResponse> SearchByLatLon(decimal latitude = -36.8441547m, decimal longitude = 174.7576598m)
         {
             int radius = 5000;
             var requestUri = $"https://developers.zomato.com/api/v2.1/search?lat={latitude}&lon={longitude}&radius={radius}";
@@ -23,9 +23,7 @@ namespace HangrySoT.ApiClient.Zomato
                 var deserialised = JsonConvert.DeserializeObject<ZomatoResponse>(responseString);
 
                 return deserialised;
-
             }
-
         }
     }
 }
