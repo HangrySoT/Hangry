@@ -57,6 +57,11 @@ namespace HangrySoT.Website.Controllers
                 strb.Append("Fear: " + scores.Fear + "\n");
                 strb.Append("\n\n");
             }
+
+            strb.Append("Current Location:\n");
+            strb.Append("Latitude: " + model.lat + "\n");
+            strb.Append("Longitude: " + model.lon + "\n");
+
             strb.Append("\n\n");
             strb.Append("Restaurants:\n");
             foreach (var foodShop in zomData.restaurants.Take(3))
