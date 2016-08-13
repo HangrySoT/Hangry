@@ -14,7 +14,7 @@ namespace HangrySoT.Tests.ApiClient.Zomato
         public async Task MakeRequestToZomatoApi()
         {
             ZomatoClient client = new ZomatoClient();
-            var zomatoObject = await client.SearchByLatLon();
+            var zomatoObject = await client.SearchByLatLon(-36.8441547,174.7576598);
             //var xizheZomatoObject = await client.SearchByLatLon(-36.842676m, 174.757502m);
             //var service = new SuperSecretSauceService();
             //var restaurantID = service.GetBestRestaurantID(xizheZomatoObject, -36.842676, 174.757502);
