@@ -27,6 +27,16 @@ textarea {
     max-width: 280px;
 }
 
+/*Images*/
+
+#picture {
+    margin-top:10px;
+    margin-bottom:10px;
+    width:99px;
+    height:111px;
+
+}
+
 /*Text*/
 
 h3 {
@@ -41,6 +51,7 @@ h3 {
     left:20px;
 }
 #loadingtext {
+    padding-top:15%;
 	font-family: Calibre;
     font-weight: 500;
 	font-size:24px;
@@ -58,14 +69,38 @@ h3 {
 	color:#FFFFFF;
 }
 
+#moodtext {
+    padding-top:15%;
+	font-family: Calibre;
+	font-size:21px;
+	line-height: 32px;
+	letter-spacing: 1.05px;
+	color:#FFFFFF;
+}
+
+#loadingtext {
+    padding-top:15%;
+	font-family: Calibre;
+	font-size:21px;
+	line-height: 32px;
+	letter-spacing: 1.05px;
+	color:#FFFFFF;
+}
 
 /*Button*/
 
-#camerabtn {
+#camera{
+    text-align:center;
+}
+
+#camerabtn{
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 	background-color:#F44336 !important;
 	border-color:#FCE4EC !important;
 	border-radius:4px;
-	border-style:3px, solid !important;
+	border-style:solid !important;
+    border-width:2px;
 	font-family:Calibre-Regular !important;
 	text-align: center;
 	font-size: 24px !important;
@@ -73,17 +108,46 @@ h3 {
     content:'Feed me';
 
 }
+
+#location{
+     text-align:center;
+}
 	
-#directionsbtn {
+#locationbtn {
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
 	background-color:#F44336;
 	border-color:#FFFFFF;
-	border-style:2px, solid ;
+	border-style:solid ;
+    border-width:2px;
 	font-family:Calibre-Regular;
+	text-align: center;
+	font-size: 24px; 
+    color:#FFFFFF;
+
+}
+
+#try{
+     text-align:center;
+}
+
+#trybtn {
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+	background-color:#F44336;
+	border-color:#FFFFFF;
+	border-style:solid ;
+    border-width:2px;
+	font-family:Calibre-Regular;
+    color:#FFFFFF;
 	text-align: center;
 	font-size: 24px; 
 
 }
-
 /*Footer*/
 footer {
     position:absolute;
