@@ -197,7 +197,6 @@
     <Content Include="fonts\Calibre-RegularItalic.otf" />
     <Content Include="fonts\Calibre-Semibold.otf" />
     <Content Include="fonts\Calibre-Thin.otf" />
-    <Content Include="AppSecrets.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
