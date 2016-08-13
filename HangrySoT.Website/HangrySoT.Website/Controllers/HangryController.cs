@@ -37,7 +37,7 @@ namespace HangrySoT.Website.Controllers
             var emotions = await oxfordClient.AnalyseImage(filestream);
             
             var zomatoClient = new ZomatoClient();
-            var zomData = await zomatoClient.SearchByLatLon();
+            var zomData = await zomatoClient.SearchByLatLon(model.lat, model.lon);
 
             StringBuilder strb = new StringBuilder();
 
