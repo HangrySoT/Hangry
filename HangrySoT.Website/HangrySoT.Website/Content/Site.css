@@ -108,4 +108,4 @@ footer {
     display: inline-block;
 }
 
-.inputfile:focus + label,
+.inputfile:focus + label
