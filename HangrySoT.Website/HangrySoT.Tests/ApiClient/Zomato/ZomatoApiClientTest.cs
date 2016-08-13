@@ -15,14 +15,12 @@ namespace HangrySoT.Tests.ApiClient.Zomato
         {
             ZomatoClient client = new ZomatoClient();
             var zomatoObject = await client.SearchByLatLon();
-            //var xizheZomatoObject = await client.SearchByLatLon(-36.934186m, 174.939321m);
+            //var xizheZomatoObject = await client.SearchByLatLon(-36.842676m, 174.757502m);
             //var service = new SuperSecretSauceService();
-            //var updatedZomatoObject = service.GetBestRestaurant(xizheZomatoObject, -36.934186, 174.939321);
+            //var restaurantID = service.GetBestRestaurantID(xizheZomatoObject, -36.842676, 174.757502);
 
             PAssert.IsTrue(() => zomatoObject.restaurants.Any());
             PAssert.IsTrue(() => zomatoObject.restaurants.First().restaurant.location.longitude != null);
-            //PAssert.IsTrue(() => updatedZomatoObject.restaurants.First().restaurant.average_cost_for_two > 38);
-            //PAssert.IsTrue(() => updatedZomatoObject.restaurants.First().restaurant.average_cost_for_two < 41);
         }
     }
 }
