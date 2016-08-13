@@ -1,8 +1,6 @@
 ﻿using HangrySoT.ApiClient.Oxford;
 using HangrySoT.ApiClient.Zomato;
 using Microsoft.ProjectOxford.Emotion.Contract;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -37,9 +35,6 @@ namespace HangrySoT.Website.Controllers
 
             var oxfordClient = new OxfordClient();
             var emotions = await oxfordClient.AnalyseImage(filestream);
-
-            //TODO: Get javascript location data.
-            //TODO: Feed emotion data to "special sauce".
             
             var zomatoClient = new ZomatoClient();
             var zomData = await zomatoClient.SearchByLatLon();
@@ -70,9 +65,7 @@ namespace HangrySoT.Website.Controllers
                 strb.Append("Address: " + foodShop.restaurant.location.address + "\n");
                 strb.Append("\n\n");
             }
-            
 
-            //Response.TransmitFile(Server.MapPath(nameAndLocation));
             return Content(strb.ToString(),"text/plain");
         }
     }
