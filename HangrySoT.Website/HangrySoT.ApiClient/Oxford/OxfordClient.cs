@@ -13,7 +13,7 @@ namespace HangrySoT.ApiClient.Oxford
 
     public class OxfordClient : IOxfordClient
     {
-        private readonly string subscriptionKey = ConfigurationManager.AppSettings["OxfordApiKey"];
+        private readonly string subscriptionKey = ConfigurationManager.AppSettings["OxfordApiKey"];  //Read api key from AppSecret.config
         private readonly EmotionServiceClient _emotionServiceClient;
 
         public OxfordClient()

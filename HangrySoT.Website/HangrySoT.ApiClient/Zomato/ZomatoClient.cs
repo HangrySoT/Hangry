@@ -9,7 +9,7 @@ namespace HangrySoT.ApiClient.Zomato
 {
     public class ZomatoClient
     {
-        readonly string userKey = ConfigurationManager.AppSettings["ZomatoApiKey"];
+        readonly string userKey = ConfigurationManager.AppSettings["ZomatoApiKey"];  //Read api key from AppSecret.config
 
         public async Task<ZomatoResponse> SearchByLatLon(decimal latitude = 36.8441547m, decimal longitude = 174.7576598m)
         {
