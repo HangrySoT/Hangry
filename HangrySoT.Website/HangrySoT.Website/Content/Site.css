@@ -25,6 +25,14 @@ textarea {
 }
 
 /*Text*/
+
+h3 {
+    font-family: Calibre-Semibold;
+	font-size:24 px;
+	letter-spacing: 0px;
+	color:#FFFFFF;
+    text-align:left;
+}
 #loadingtext {
 	font-family: Calibre-Semibold;
 	font-size:24 px;
@@ -36,7 +44,7 @@ textarea {
 
 #descriptiontext {
 	font-family: Calibre-Regular;
-	font-size:21 px;
+	font-size:21px;
 	font-weight:500;
 	line-height: 32px;
 	letter-spacing: 1.05px;
@@ -51,10 +59,11 @@ textarea {
 	border-color:#FCE4EC !important;
 	border-radius: 4px;
 	border-style:3px, solid !important;
-	font-family:Calibre-Regular;
+	font-family:Calibre-Regular !important;
 	text-align: center;
-	font-size: 24px;
+	font-size: 24px !important;
 	font-weight: normal;
+    content:'Feed me';
 
 }
 	
@@ -67,4 +76,3 @@ textarea {
 	font-size: 24px; 
 
 }
-
