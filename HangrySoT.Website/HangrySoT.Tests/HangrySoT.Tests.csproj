@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiClient\Zomato\ZomatoApiClientTest.cs" />
+    <Compile Include="Hangry\ZomatoDeserialiseTest.cs" />
     <Compile Include="Models\Zomato\ZomatoDeserialiseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
