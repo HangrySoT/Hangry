@@ -32,7 +32,7 @@
 <div id="loadingScreen">
     <div class="row" id="pictureloading">
         <img src="~/Content/chef-1.svg" />
-        <p id="loadingtext">Loading...</p>
+        <p id="loadingtext">Curing hanger...</p>
     </div>
 </div>
 
@@ -47,9 +47,6 @@
         $("input[name=lat]").val(lat);
         $("input[name=lon]").val(lon);
     }
-    
-    //Set visability
-    document.getElementById("loadingScreen").style.display = "none";
 
     function loadingFunct() {
         document.getElementById("mainScreen").style.display = "none";

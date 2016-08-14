@@ -1,6 +1,9 @@
 ﻿@font-face {font-family: Calibre; src:url('/fonts/Calibre-Regular.otf');}
 @font-face {font-family: Calibre; font-weight: 500; src:url('/fonts/Calibre-Semibold.otf');}
 
+#loadingScreen {
+    display:none;
+}
 
 body {
     padding-top: 50px;
@@ -79,7 +82,7 @@ h3 {
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
-    margin-bottom:50px;
+    margin-bottom:60px;
 }
 
 #moodtext {
