@@ -83,53 +83,50 @@ h3 {
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
     margin-bottom:60px;
+
 }
 
 #moodtext {
     padding-top:10px;
 	font-family: Calibre;
-	font-size:21px;
+	font-size:19px;
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
+    margin:0;
 }
 
 #resultNametext {
     padding-top:10px;
 	font-family: Calibre;
-	font-size:24px;
+	font-size:22px;
     font-weight:500;
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
+    margin:0;
 }
 
 #resultdescriptiontext {
     padding-top:10px;
 	font-family: Calibre;
-	font-size:21px;
+	font-size:19px;
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
+    margin:0;
 }
 
 #locationtext {
     padding-top:10px;
 	font-family: Calibre;
-	font-size:21px;
+	font-size:19px;
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
+    margin:0;
 }
 
-#loadingtext {
-    padding-top:10px;
-	font-family: Calibre;
-	font-size:21px;
-	line-height: 32px;
-	letter-spacing: 1.05px;
-	color:#FFFFFF;
-}
 
 /*Button*/
 
@@ -198,14 +195,13 @@ h3 {
     color:#FFFFFF;
     line-height:2.5;
     padding:0px 20px 0 20px;
-
 }
 
 #try{
      text-align:center;
 }
 
-#trybtn {
+.resultbtn {
     -moz-border-radius: 10px;
     border-radius: 10px;
     margin-top:10px;
@@ -215,12 +211,15 @@ h3 {
 	border-style:solid ;
     border-width:2px;
 	font-family:Calibre;
-    color:#FFFFFF;
 	text-align: center;
 	font-size: 24px; 
+    color:#FFFFFF;
     line-height:2.5;
-    padding:0px 20px 0 20px;
+    padding:10px 20px 10px 20px;
+}
 
+a {
+    text-decoration:none;
 }
 /*Footer*/
 footer {
