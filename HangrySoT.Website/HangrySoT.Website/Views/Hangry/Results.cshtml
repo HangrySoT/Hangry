@@ -25,13 +25,13 @@
 </div>
 
 <div class="row" id="distance">
-    <p id="locationtext">Just @Model.restDistance meters away.</p>
+    <p id="locationtext">Just @Model.restDistance meters away</p>
 </div>
 
 @if (Model.restAvgPrice > 0)
 {
 <div class="row" id="avgPrice">
-    <p id="locationtext">@Model.restAvgPrice.ToString("C")</p>
+    <p id="locationtext">Average price of @Model.restAvgPrice.ToString("C")</p>
 </div>
 }
 
