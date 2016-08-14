@@ -35,7 +35,7 @@ namespace HangrySoT.Website.Services
                 double averageAnger = totalAnger / number_of_people * 100;
                 double averageHappiness = totalHappiness / number_of_people;
 
-                if (averageHappiness >= 0.9)
+                if (averageHappiness >= 0.7)
                 {
                     hangryMessage += " happy, let's go further to get cheaper food";
                 }
@@ -56,7 +56,7 @@ namespace HangrySoT.Website.Services
                 {
                     var anger = (double)emotion.Scores.Anger * 100;
                     var happiness = (double)emotion.Scores.Happiness;
-                    if (happiness >= 0.9)
+                    if (happiness >= 0.7)
                     {
                         hangryMessage = "You look happy, let's go further to get cheaper food";
                     }
