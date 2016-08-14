@@ -3,18 +3,42 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-<form method="post" enctype="multipart/form-data">
-    <input type="file" accept="image/*" capture="camera" name="image">
-    <input type="hidden" name="lat" value="-36.8441547" />
-    <input type="hidden" name="lon" value="174.7576598" />
-    <input type="submit" />
-    <input type="hidden" name="demo" value="@ViewBag.demo.ToString()" />    
-</form>
+<div class="row" id="logo">
+    <h3>hangry</h3>
+</div>
+
+<div id="mainScreen">
+    <div class="row " id="descriptiontext">
+        <p>Send us a photo to measure your hangriness.<br>Find places to eat.</p>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="btn row" id="camera">
+            <label class="filelabel">
+                Feed Me!
+                <input class="inputfile" type="file" name="image" accept="image/*" capture="camera">
+            </label>
+        </div>
+        <input type="hidden" name="lat" value="-36.8441547" />
+        <input type="hidden" name="lon" value="174.7576598" />
+        <input type="hidden" name="demo" value="@ViewBag.demo.ToString()" />
+        <div class="btn row" id="submit">
+            <button type="submit" id="submitbtn" onclick="loadingFunct()">Submit</button>
+        </div>       
+    </form>
+
+</div>
+
+<div id="loadingScreen">
+    <div class="row" id="pictureloading">
+        <img src="~/Content/chef-1.svg" />
+        <p id="loadingtext">Loading...</p>
+    </div>
+</div>
 
 <script>
     //Collect loaction in lat and lon
-    navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
+    navigator.geolocation.getCurrentPosition(foundLocation);
 
     function foundLocation(position) {
 
@@ -23,7 +47,12 @@
         $("input[name=lat]").val(lat);
         $("input[name=lon]").val(lon);
     }
-    function noLocation() {
-        alert('Could not find location');
+    
+    //Set visability
+    document.getElementById("loadingScreen").style.display = "none";
+
+    function loadingFunct() {
+        document.getElementById("mainScreen").style.display = "none";
+        document.getElementById("loadingScreen").style.display = "block";
     }
 </script>
