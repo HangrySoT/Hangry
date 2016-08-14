@@ -12,5 +12,10 @@ navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
     alert('Could not find location');
   }
 
-//Go to Loading Screen
-   
+//Set visability
+  document.getElementById("loadingScreen").style.display = "none";
+
+  function loadingFunct() {
+      document.getElementById("mainScreen").style.display = "none";
+      document.getElementById("loadingScreen").style.display = "block";
+  }
