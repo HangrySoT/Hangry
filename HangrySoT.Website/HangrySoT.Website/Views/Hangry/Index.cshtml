@@ -12,19 +12,19 @@
         <p>Send us a photo to measure your hangriness.<br>Find places to eat.</p>
     </div>
 
-    <form method="post" enctype="multipart/form-data">
+    <form id="form" method="post" enctype="multipart/form-data">
         <div class="btn row" id="camera">
             <label class="filelabel">
-                Feed Me!
-                <input class="inputfile" type="file" name="image" accept="image/*" capture="camera">
+                Judge My Hanger
+                <input id="inputfile" class="inputfile" type="file" name="image" accept="image/*" capture="camera">
             </label>
         </div>
         <input type="hidden" name="lat" value="-36.8441547" />
         <input type="hidden" name="lon" value="174.7576598" />
         <input type="hidden" name="demo" value="@ViewBag.demo.ToString()" />
-        <div class="btn row" id="submit">
+        @*<div class="btn row" id="submit">
             <button type="submit" id="submitbtn" onclick="loadingFunct()">Submit</button>
-        </div>       
+        </div>*@       
     </form>
 
 </div>
@@ -54,5 +54,10 @@
     function loadingFunct() {
         document.getElementById("mainScreen").style.display = "none";
         document.getElementById("loadingScreen").style.display = "block";
+    }
+
+    document.getElementById("inputfile").onchange = function() {
+        loadingFunct();
+        document.getElementById("form").submit();
     }
 </script>
