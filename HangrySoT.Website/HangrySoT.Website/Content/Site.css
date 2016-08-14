@@ -1,5 +1,7 @@
 ﻿@font-face {font-family: Calibre; src:url('/fonts/Calibre-Regular.otf');}
 @font-face {font-family: Calibre; font-weight: 500; src:url('/fonts/Calibre-Semibold.otf');}
+@font-face {font-family: Montserrat; src:url('/fonts/Montserrat-Regular.otf');}
+@font-face {font-family: Montserrat; font-weight: 500; src:url('/fonts/Montserrat-SemiBold.otf');}
 
 #loadingScreen {
     display:none;
