@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Device.Location;
-using System.Linq;
-using System.Web;
+﻿using System.Device.Location;
 using HangrySoT.ApiClient.Models;
-using Microsoft.ProjectOxford.Emotion;
 using Microsoft.ProjectOxford.Emotion.Contract;
 
 namespace HangrySoT.Website.Services
@@ -19,21 +14,63 @@ namespace HangrySoT.Website.Services
             string bestRestaurantID = "";
             double bestRestaurantModifiedPriceRange = 0;
             double bestRestaurantDistance = 0;
-            //string bestRestaurantAddress = "";
-            var firstEmotion = Emotions.First();
-            var anger = firstEmotion.Scores.Anger;
-            var happiness = firstEmotion.Scores.Happiness;
-            string hangryMessage;
-            if(happiness >= 0.9)
+
+            //get number of faces and adjust costPerMetre
+            int number_of_people = 0;
+            //finding number of faces
+            foreach (var Emotion in Emotions)
             {
-                costPerMetre = costPerMetre / 2;
-                hangryMessage = "Looks like you're having a good day, let's go further to get better food:";
+                number_of_people += 1;
             }
-            else
+
+            //no face detected
+            if (number_of_people == 0)
             {
-                costPerMetre = costPerMetre * 2;
-                hangryMessage = "You look pretty hangry! Cure it with:";
+                return "0"; //if 0 there's no face
             }
+
+            //more than one face
+            if (number_of_people > 1)
+            {
+                double totalAnger = 0;
+                double totalHappiness = 0;
+                foreach (var emotion in Emotions)
+                {
+                    totalAnger += (double)emotion.Scores.Anger;
+                    totalHappiness += (double)emotion.Scores.Happiness;
+                }
+
+                double averageAnger = totalAnger / number_of_people * 100;
+                double averageHappiness = totalHappiness / number_of_people;
+
+                if (averageHappiness >= 0.9)
+                {
+                    costPerMetre = 0;
+                }
+                else if (averageAnger >= 50)
+                {
+                    costPerMetre = costPerMetre * 4;
+                }
+            }
+
+            //exactly one face
+            if (number_of_people == 1)
+            {
+                foreach (var emotion in Emotions)
+                {
+                    var anger = (double)emotion.Scores.Anger * 100;
+                    var happiness = (double)emotion.Scores.Happiness;
+                    if (happiness >= 0.9)
+                    {
+                        costPerMetre = 0;
+                    }
+                    else if (anger >= 50)
+                    {
+                        costPerMetre = costPerMetre * 4;
+                    }
+                }
+            }
+
 
             foreach (var restaurant in ZomatoResponse.restaurants)
             {
