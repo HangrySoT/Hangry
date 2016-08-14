@@ -37,15 +37,15 @@ namespace HangrySoT.Website.Services
 
                 if (averageHappiness >= 0.9)
                 {
-                    hangryMessage = " happy, let's go further to get cheaper food:";
+                    hangryMessage += " happy, let's go further to get cheaper food:";
                 }
                 else if (averageAnger >= 50)
                 {
-                    hangryMessage = " " + averageAnger.ToString() + "% hangry! Cure it with:";
+                    hangryMessage += " " + averageAnger.ToString() + "% hangry! Cure it with:";
                 }
                 else
                 {
-                    hangryMessage = " a bit hangry! Cure it with:";
+                    hangryMessage += " a bit hangry! Cure it with:";
                 }
             }
 

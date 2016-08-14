@@ -49,7 +49,7 @@ namespace HangrySoT.Website.Services
                 }
                 else if (averageAnger >= 50)
                 {
-                    costPerMetre = costPerMetre * 4;
+                    costPerMetre = costPerMetre * 750;
                 }
             }
 
@@ -66,7 +66,7 @@ namespace HangrySoT.Website.Services
                     }
                     else if (anger >= 50)
                     {
-                        costPerMetre = costPerMetre * 4;
+                        costPerMetre = costPerMetre * 750;
                     }
                 }
             }
@@ -85,7 +85,7 @@ namespace HangrySoT.Website.Services
                     bestRestaurantModifiedPriceRange = processedPriceRange;
                     bestRestaurantDistance = distance;
                 }
-                else if (bestRestaurantModifiedPriceRange > processedPriceRange && distance < bestRestaurantDistance)
+                else if (bestRestaurantModifiedPriceRange > processedPriceRange)
                 {
                     bestRestaurantID = restaurant.restaurant.id;
                     bestRestaurantModifiedPriceRange = processedPriceRange;
