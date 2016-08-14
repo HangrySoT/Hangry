@@ -199,6 +199,10 @@
     <Content Include="Content\chef-1.svg" />
     <Content Include="Content\chef-2.svg" />
     <Content Include="Content\iphoneicon.png" />
+    <Content Include="Content\Windows\large.jpg" />
+    <Content Include="Content\Windows\medium.jpg" />
+    <Content Include="Content\Windows\small.jpg" />
+    <Content Include="Content\Windows\wide.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
