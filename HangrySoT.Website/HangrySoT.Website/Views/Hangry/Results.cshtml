@@ -1,0 +1,46 @@
+﻿@model HangrySoT.Website.Controllers.HangryViewModel
+
+@{
+    ViewBag.Title = "Results";
+}
+
+
+<div class="row" id="logo">
+    <h3>hangry</h3>
+</div>
+
+<div class="row" id="picture">
+    <img src="~/Content/chef-2.svg" />
+</div>
+
+<div class="row" id="mood">
+    <p id="moodtext">@Model.hangryMessage</p>
+</div>
+
+<div class="row" id="resultName">
+    <p id="resultNametext">@Model.restName</p>
+</div>
+
+<div class="row" id="resultdescription">
+    <p id="resultdescriptiontext">DESCRIPTION</p>
+</div>
+
+<div class="row" id="location">
+    <p id="locationtext">@Model.restAddress</p>
+</div>
+
+<div class="row" id="distance">
+    <p id="locationtext">@Model.restDistance</p>
+</div>
+
+<div class="row" id="avgPrice">
+    <p id="locationtext">@Model.restAvgPrice.ToString("C")</p>
+</div>
+
+<div class="btn row" id="location">
+    <button type="button" id="locationbtn">get directions</button>
+</div>
+
+<div class="btn row" id="try">
+    <button type="button" id="trybtn">try again</button>
+</div>
