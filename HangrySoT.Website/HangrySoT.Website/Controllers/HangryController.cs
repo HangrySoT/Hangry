@@ -73,6 +73,8 @@ namespace HangrySoT.Website.Controllers
             var userCoord = new GeoCoordinate(model.lat, model.lon);
             var restCoord = new GeoCoordinate(double.Parse(chosenRestaurant.restaurant.location.latitude), double.Parse(chosenRestaurant.restaurant.location.longitude));
 
+            EmotionMessageService emoService = new EmotionMessageService();
+            var message = emoService.getEmotionMessageService(emotions);
             var viewModel = new HangryViewModel
             {
                 restName = chosenRestaurant.restaurant.name,
@@ -81,7 +83,7 @@ namespace HangrySoT.Website.Controllers
                 restDistance = (int)userCoord.GetDistanceTo(restCoord),
                 restLat = model.lat.ToString(),
                 restLon = model.lon.ToString(),
-                hangryMessage = "You look hangry af."
+                hangryMessage = message
             };
 
             //foreach (var face in emotions)

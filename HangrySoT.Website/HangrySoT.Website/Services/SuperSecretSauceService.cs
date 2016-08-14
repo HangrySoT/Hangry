@@ -24,10 +24,6 @@ namespace HangrySoT.Website.Services
             }
 
             //no face detected
-            if (number_of_people == 0)
-            {
-                return "0"; //if 0 there's no face
-            }
 
             //more than one face
             if (number_of_people > 1)

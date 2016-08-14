@@ -17,7 +17,7 @@ namespace HangrySoT.Website.Services
             //no face detected
             if(number_of_people == 0)
             {
-                hangryMessage = "Sorry no face is detected, try again?";
+                hangryMessage = "We couldn't see you, but here's a place anyway";
             }
 
             //more than one face
@@ -37,15 +37,15 @@ namespace HangrySoT.Website.Services
 
                 if (averageHappiness >= 0.9)
                 {
-                    hangryMessage += " happy, let's go further to get cheaper food:";
+                    hangryMessage += " happy, let's go further to get cheaper food";
                 }
                 else if (averageAnger >= 50)
                 {
-                    hangryMessage += " " + averageAnger.ToString() + "% hangry! Cure it with:";
+                    hangryMessage += " " + averageAnger.ToString() + "% hangry! Cure it with";
                 }
                 else
                 {
-                    hangryMessage += " a bit hangry! Cure it with:";
+                    hangryMessage += " a bit hangry! Cure it with";
                 }
             }
 
@@ -58,15 +58,15 @@ namespace HangrySoT.Website.Services
                     var happiness = (double)emotion.Scores.Happiness;
                     if (happiness >= 0.9)
                     {
-                        hangryMessage = "You look happy, let's go further to get cheaper food:";
+                        hangryMessage = "You look happy, let's go further to get cheaper food";
                     }
                     else if (anger >= 50)
                     {
-                        hangryMessage = "You look " + anger.ToString() + "% hangry! Cure it with:";
+                        hangryMessage = "You look " + anger.ToString() + "% hangry! Cure it with";
                     }
                     else
                     {
-                        hangryMessage = "You look a bit hangry! Cure it with:";
+                        hangryMessage = "You look a bit hangry! Cure it with";
                     }
                 }
             }
