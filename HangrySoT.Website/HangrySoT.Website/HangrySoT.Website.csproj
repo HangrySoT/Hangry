@@ -199,10 +199,6 @@
     <Content Include="Content\chef-1.svg" />
     <Content Include="Content\chef-2.svg" />
     <Content Include="Content\iphoneicon.png" />
-    <Content Include="Content\Windows\large.jpg" />
-    <Content Include="Content\Windows\medium.jpg" />
-    <Content Include="Content\Windows\small.jpg" />
-    <Content Include="Content\Windows\wide.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -218,6 +214,14 @@
     <Content Include="fonts\Calibre-Semibold.otf" />
     <Content Include="fonts\Calibre-Thin.otf" />
     <Content Include="AppSecrets.SAMPLE.config" />
+    <Content Include="fonts\Montserrat-Black.otf" />
+    <Content Include="fonts\Montserrat-Bold.otf" />
+    <Content Include="fonts\Montserrat-ExtraBold.otf" />
+    <Content Include="fonts\Montserrat-Hairline.otf" />
+    <Content Include="fonts\Montserrat-Light.otf" />
+    <Content Include="fonts\Montserrat-Regular.otf" />
+    <Content Include="fonts\Montserrat-SemiBold.otf" />
+    <Content Include="fonts\Montserrat-UltraLight.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
