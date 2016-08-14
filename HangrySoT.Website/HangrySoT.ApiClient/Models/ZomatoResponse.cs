@@ -22,8 +22,8 @@
         public string url { get; set; }
         public Location location { get; set; }
         public string cuisines { get; set; }
-        public int average_cost_for_two { get; set; }
-        public int price_range { get; set; }
+        public double average_cost_for_two { get; set; }
+        public double price_range { get; set; }
         public string currency { get; set; }
         public object[] offers { get; set; }
         public string thumb { get; set; }
