@@ -3,13 +3,38 @@
 }
 
 <div class="row" id="logo">
-    <h3>Hangry</h3>
+    <h3>hangry</h3>
 </div>
 
-<div class="row" id="descriptiontext">
-    <p>Send us a photo to measure our hangriness.<br>Find places to eat.</p>
+<div id="mainScreen">
+    <div class="row " id="descriptiontext">
+        <p>Send us a photo to measure your hangriness.<br>Find places to eat.</p>
+    </div>
+
+    <div class="btn row" id="camera">
+        <label class="filelabel">
+            Feed Me!
+            <input class="inputfile" type="file" name="file" accept="image/*" capture="camera">
+        </label>
+    </div>
+    
+    <div class="btn row" id="submit">
+        <button type="submit" id="submitbtn" onclick="loadingFunct()">Submit</button>
+    </div>
+    
+
+    <div>
+        @Html.ActionLink("Click Here For Results", "Results")
+    </div>
+
+    <div>
+        @Html.ActionLink("Click Here For Loading", "Loading")
+    </div>
 </div>
 
-<div class="btn row" id="camerabtn">
-     <input type="file" accept="image/*" capture="camera">
+<div id="loadingScreen">
+    <div class="row" id="pictureloading">
+    <img src="~/Content/chef-1.svg" />
+    <p id="loadingtext">Loading...</p>
+</div>
 </div>
