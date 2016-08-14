@@ -35,10 +35,10 @@
 </div>
 }
 
-<div class="btn row" id="location">
-    <a class="btn btn-default" target="_blank" role="button" id="locationbtn" href="https://maps.google.com/maps/dir/Current+Location/@Model.restLat,@Model.restLon">get directions</a>
+<div class="btn row resultspacing" id="location">
+    <a class="button resultbtn" target="_blank" role="button" href="https://maps.google.com/maps/dir/Current+Location/@Model.restLat,@Model.restLon">get directions</a>
 </div>
 
 <div class="btn row" id="try">
-    <a class="button resultbtn" id="trybtn" href="@Url.Action("Index")">try again</a>
+    <a href="@Url.Action("Index")" style="color:white;">try again</a>
 </div>
