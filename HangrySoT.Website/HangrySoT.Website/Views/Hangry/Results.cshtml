@@ -4,7 +4,6 @@
     ViewBag.Title = "Results";
 }
 
-
 <div class="row" id="logo">
     <h3>hangry</h3>
 </div>
@@ -37,7 +36,7 @@
 }
 
 <div class="btn row" id="location">
-    <button type="button" id="locationbtn">get directions</button>
+    <a class="btn btn-default" target="_blank" role="button" id="locationbtn" href="https://maps.google.com/maps/dir/Current+Location/@Model.restLat,@Model.restLon">get directions</a>
 </div>
 
 <div class="btn row" id="try">
