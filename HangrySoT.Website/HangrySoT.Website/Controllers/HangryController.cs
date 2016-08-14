@@ -81,8 +81,8 @@ namespace HangrySoT.Website.Controllers
                 restAddress = chosenRestaurant.restaurant.location.address,
                 restAvgPrice = chosenRestaurant.restaurant.average_cost_for_two / 2,
                 restDistance = (int)userCoord.GetDistanceTo(restCoord),
-                restLat = model.lat.ToString(),
-                restLon = model.lon.ToString(),
+                restLat = chosenRestaurant.restaurant.location.latitude.ToString(),
+                restLon = chosenRestaurant.restaurant.location.longitude.ToString(),
                 hangryMessage = message
             };
 
