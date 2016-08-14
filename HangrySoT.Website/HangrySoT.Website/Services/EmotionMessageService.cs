@@ -39,7 +39,7 @@ namespace HangrySoT.Website.Services
                 {
                     hangryMessage += " happy, let's go further to get cheaper food";
                 }
-                else if (averageAnger >= 50)
+                else if (averageAnger >= 25)
                 {
                     hangryMessage += " " + averageAnger.ToString() + "% hangry! Cure it with";
                 }
@@ -60,7 +60,7 @@ namespace HangrySoT.Website.Services
                     {
                         hangryMessage = "You look happy, let's go further to get cheaper food";
                     }
-                    else if (anger >= 50)
+                    else if (anger >= 25)
                     {
                         hangryMessage = "You look " + anger.ToString() + "% hangry! Cure it with";
                     }
