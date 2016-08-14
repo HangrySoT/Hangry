@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using HangrySoT.Website.Models;
 using System.Linq;
 using PowerAssert;
 using HangrySoT.ApiClient.Models;

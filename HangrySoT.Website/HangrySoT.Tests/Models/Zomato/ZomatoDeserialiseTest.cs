@@ -5,7 +5,7 @@ using System.Linq;
 using PowerAssert;
 using HangrySoT.ApiClient.Models;
 
-namespace HangrySoT.Tests.Models
+namespace HangrySoT.Tests.Models.Zomato
 {
     [TestClass]
     public class ZomatoDeserialiseTest
