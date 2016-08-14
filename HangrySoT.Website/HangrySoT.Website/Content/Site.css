@@ -77,6 +77,7 @@ h3 {
 	line-height: 32px;
 	letter-spacing: 1.05px;
 	color:#FFFFFF;
+    margin-bottom:50px;
 }
 
 #moodtext {
@@ -123,6 +124,26 @@ h3 {
     line-height:2.5;
     padding:0px 20px 0 20px;
    
+}
+
+#submit {
+    text-align:center;
+}
+#submitbtn {
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+	background-color:#F44336;
+	border-color:#FFFFFF;
+	border-style:solid ;
+    border-width:2px;
+	font-family:Calibre;
+	text-align: center;
+	font-size: 24px; 
+    color:#FFFFFF;
+    line-height:2.5;
+    padding:0px 30px 0 30px;
 }
 
 #location{

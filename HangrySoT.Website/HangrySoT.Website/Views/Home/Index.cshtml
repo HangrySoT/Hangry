@@ -17,8 +17,11 @@
             <input class="inputfile" type="file" name="file" accept="image/*" capture="camera">
         </label>
     </div>
-
-    <button type="submit" onclick="loadingFunct()">Submit</button>
+    
+    <div class="btn row" id="submit">
+        <button type="submit" id="submitbtn" onclick="loadingFunct()">Submit</button>
+    </div>
+    
 
     <div>
         @Html.ActionLink("Click Here For Results", "Results")
