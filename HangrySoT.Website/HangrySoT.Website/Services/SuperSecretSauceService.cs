@@ -43,7 +43,7 @@ namespace HangrySoT.Website.Services
                 {
                     costPerMetre = 0;
                 }
-                else if (averageAnger >= 50)
+                else if (averageAnger >= 25)
                 {
                     costPerMetre = costPerMetre * 750;
                 }
@@ -60,7 +60,7 @@ namespace HangrySoT.Website.Services
                     {
                         costPerMetre = 0;
                     }
-                    else if (anger >= 50)
+                    else if (anger >= 25)
                     {
                         costPerMetre = costPerMetre * 750;
                     }
