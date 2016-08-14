@@ -1,5 +1,6 @@
 ﻿using HangrySoT.ApiClient.Oxford;
 using HangrySoT.ApiClient.Zomato;
+using HangrySoT.Website.Services;
 using Microsoft.ProjectOxford.Emotion.Contract;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace HangrySoT.Website.Controllers
     {
         public double lat { get; set; }
         public double lon { get; set; }
+        public bool demo { get; set; }
         public HttpPostedFileBase image { get; set; }       
 
     }
@@ -20,8 +22,9 @@ namespace HangrySoT.Website.Controllers
     public class HangryController : Controller
     {
         // GET: Hangry
-        public ActionResult Index()
+        public ActionResult Index(bool demo = false)
         {
+            ViewBag.demo = demo;
             return View();
         }
 
@@ -30,14 +33,26 @@ namespace HangrySoT.Website.Controllers
         {
             //string nameAndLocation = "~/UploadedFiles/" + model.image.FileName;
             //model.image.SaveAs(Server.MapPath(nameAndLocation));
+            if (model.demo){
+                model.lat = -36.850900;
+                model.lon = 174.764517;
+            }
 
             var filestream = model.image.InputStream;
 
             var oxfordClient = new OxfordClient();
-            var emotions = await oxfordClient.AnalyseImage(filestream);
-            
             var zomatoClient = new ZomatoClient();
-            var zomData = await zomatoClient.SearchByLatLon(model.lat, model.lon);
+            var secretSauce = new SuperSecretSauceService();
+
+            var emotionsTask = oxfordClient.AnalyseImage(filestream);            
+            var zomDataTask = zomatoClient.SearchByLatLon(model.lat, model.lon);
+
+            var emotions = await emotionsTask;
+            var zomData = await zomDataTask;
+
+
+            var restaurantId = secretSauce.GetBestRestaurantID(zomData, emotions, model.lat, model.lon);
+            var chosenRestaurant = zomData.restaurants.Single(r => r.restaurant.id == restaurantId);
 
             StringBuilder strb = new StringBuilder();
 
@@ -63,13 +78,9 @@ namespace HangrySoT.Website.Controllers
             strb.Append("Longitude: " + model.lon + "\n");
 
             strb.Append("\n\n");
-            strb.Append("Restaurants:\n");
-            foreach (var foodShop in zomData.restaurants.Take(3))
-            {
-                strb.Append("Name: " + foodShop.restaurant.name +"\n");
-                strb.Append("Address: " + foodShop.restaurant.location.address + "\n");
-                strb.Append("\n\n");
-            }
+            strb.Append("Chosen Restaurant:\n");
+            strb.Append("Name: " + chosenRestaurant.restaurant.name + "\n");
+            strb.Append("Address: " + chosenRestaurant.restaurant.name + "\n");
 
             return Content(strb.ToString(),"text/plain");
         }
