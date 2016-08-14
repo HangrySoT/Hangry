@@ -1,5 +1,6 @@
 ﻿using HangrySoT.ApiClient.Oxford;
 using HangrySoT.ApiClient.Zomato;
+using HangrySoT.Website.Services;
 using Microsoft.ProjectOxford.Emotion.Contract;
 using System.Linq;
 using System.Text;
@@ -34,10 +35,18 @@ namespace HangrySoT.Website.Controllers
             var filestream = model.image.InputStream;
 
             var oxfordClient = new OxfordClient();
-            var emotions = await oxfordClient.AnalyseImage(filestream);
-            
             var zomatoClient = new ZomatoClient();
-            var zomData = await zomatoClient.SearchByLatLon(model.lat, model.lon);
+            var secretSauce = new SuperSecretSauceService();
+
+            var emotionsTask = oxfordClient.AnalyseImage(filestream);            
+            var zomDataTask = zomatoClient.SearchByLatLon(-36.850900, 174.764517);
+
+            var emotions = await emotionsTask;
+            var zomData = await zomDataTask;
+
+
+            var restaurantId = secretSauce.GetBestRestaurantID(zomData, emotions, -36.850900, 174.764517);
+            var chosenRestaurant = zomData.restaurants.Single(r => r.restaurant.id == restaurantId);
 
             StringBuilder strb = new StringBuilder();
 
@@ -63,13 +72,9 @@ namespace HangrySoT.Website.Controllers
             strb.Append("Longitude: " + model.lon + "\n");
 
             strb.Append("\n\n");
-            strb.Append("Restaurants:\n");
-            foreach (var foodShop in zomData.restaurants.Take(3))
-            {
-                strb.Append("Name: " + foodShop.restaurant.name +"\n");
-                strb.Append("Address: " + foodShop.restaurant.location.address + "\n");
-                strb.Append("\n\n");
-            }
+            strb.Append("Chosen Restaurant:\n");
+            strb.Append("Name: " + chosenRestaurant.restaurant.name + "\n");
+            strb.Append("Address: " + chosenRestaurant.restaurant.name + "\n");
 
             return Content(strb.ToString(),"text/plain");
         }
