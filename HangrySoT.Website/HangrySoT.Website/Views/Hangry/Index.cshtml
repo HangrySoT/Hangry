@@ -8,7 +8,8 @@
     <input type="file" accept="image/*" capture="camera" name="image">
     <input type="hidden" name="lat" value="-36.8441547" />
     <input type="hidden" name="lon" value="174.7576598" />
-    <input type="submit" />    
+    <input type="submit" />
+    <input type="hidden" name="demo" value="@ViewBag.demo.ToString()" />    
 </form>
 
 <script>
@@ -16,6 +17,7 @@
     navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
 
     function foundLocation(position) {
+
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         $("input[name=lat]").val(lat);

@@ -14,6 +14,7 @@ namespace HangrySoT.Website.Controllers
     {
         public double lat { get; set; }
         public double lon { get; set; }
+        public bool demo { get; set; }
         public HttpPostedFileBase image { get; set; }       
 
     }
@@ -21,8 +22,9 @@ namespace HangrySoT.Website.Controllers
     public class HangryController : Controller
     {
         // GET: Hangry
-        public ActionResult Index()
+        public ActionResult Index(bool demo = false)
         {
+            ViewBag.demo = demo;
             return View();
         }
 
@@ -31,6 +33,10 @@ namespace HangrySoT.Website.Controllers
         {
             //string nameAndLocation = "~/UploadedFiles/" + model.image.FileName;
             //model.image.SaveAs(Server.MapPath(nameAndLocation));
+            if (model.demo){
+                model.lat = -36.850900;
+                model.lon = 174.764517;
+            }
 
             var filestream = model.image.InputStream;
 
@@ -39,13 +45,13 @@ namespace HangrySoT.Website.Controllers
             var secretSauce = new SuperSecretSauceService();
 
             var emotionsTask = oxfordClient.AnalyseImage(filestream);            
-            var zomDataTask = zomatoClient.SearchByLatLon(-36.850900, 174.764517);
+            var zomDataTask = zomatoClient.SearchByLatLon(model.lat, model.lon);
 
             var emotions = await emotionsTask;
             var zomData = await zomDataTask;
 
 
-            var restaurantId = secretSauce.GetBestRestaurantID(zomData, emotions, -36.850900, 174.764517);
+            var restaurantId = secretSauce.GetBestRestaurantID(zomData, emotions, model.lat, model.lon);
             var chosenRestaurant = zomData.restaurants.Single(r => r.restaurant.id == restaurantId);
 
             StringBuilder strb = new StringBuilder();
