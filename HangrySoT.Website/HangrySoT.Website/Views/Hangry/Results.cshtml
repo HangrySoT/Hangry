@@ -35,6 +35,10 @@
 </div>
 }
 
+<div class="row" id="userLocation">
+    <p id="locationtext">You are at: @Model.userLat, @Model.userLon.</p>
+</div>
+
 <div class="btn row resultspacing" id="location">
     <a class="button resultbtn" target="_blank" role="button" href="https://maps.google.com/maps/dir/Current+Location/@Model.restLat,@Model.restLon">get directions</a>
 </div>

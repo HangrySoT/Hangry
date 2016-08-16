@@ -28,6 +28,8 @@ namespace HangrySoT.Website.Controllers
         public double restAvgPrice;
         public string restLat;
         public string restLon;
+        public string userLat;
+        public string userLon;
     }
 
 
@@ -83,6 +85,8 @@ namespace HangrySoT.Website.Controllers
                 restDistance = (int)userCoord.GetDistanceTo(restCoord),
                 restLat = chosenRestaurant.restaurant.location.latitude.ToString(),
                 restLon = chosenRestaurant.restaurant.location.longitude.ToString(),
+                userLat = model.lat.ToString(),
+                userLon = model.lon.ToString(),
                 hangryMessage = message
             };
 
@@ -126,6 +130,8 @@ namespace HangrySoT.Website.Controllers
                 restDistance = 134,
                 restLat = "-36",
                 restLon = "172",
+                userLat = "-36",
+                userLon = "172",
                 hangryMessage = "You look hangry af."
             };
 
