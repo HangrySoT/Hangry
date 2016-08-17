@@ -13,18 +13,19 @@
     </div>
 
     <form id="form" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
         <div class="btn row" id="camera">
             <label class="filelabel">
                 Judge My Hanger
                 <input id="inputfile" class="inputfile" type="file" name="image" accept="image/*" capture="camera">
             </label>
         </div>
-        <input type="hidden" name="lat" value="-36.8441547" />
-        <input type="hidden" name="lon" value="174.7576598" />
-        <input type="hidden" name="demo" value="@ViewBag.demo.ToString()" />
-        @*<div class="btn row" id="submit">
+        <input type="hidden" name="lat" value="-36.8441547"/>
+        <input type="hidden" name="lon" value="174.7576598"/>
+        <input type="hidden" name="demo" value="@ViewBag.demo.ToString()"/>
+        @*@<div class="btn row" id="submit">
             <button type="submit" id="submitbtn" onclick="loadingFunct()">Submit</button>
-        </div>*@       
+        </div>*@
     </form>
 
 </div>

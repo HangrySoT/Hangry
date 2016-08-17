@@ -42,6 +42,7 @@ namespace HangrySoT.Website.Controllers
 
         [Route("")]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async System.Threading.Tasks.Task<ActionResult> Index(HangryInputModel model)
         {
             if (model.demo)
